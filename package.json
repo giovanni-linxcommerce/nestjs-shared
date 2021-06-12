@@ -1,8 +1,8 @@
 {
-  "name": "@nestjsplus/nestjs-package-starter",
-  "version": "1.0.0",
-  "description": "NestJS npm package starter",
-  "author": "John Biundo <johnfbiundo@gmail.com>",
+  "name": "@linxdigital/nestjs-shared",
+  "version": "0.1.0",
+  "description": "NestJS npm package shared",
+  "author": "Giovanni Mansueto <giovanni.mansueto@linx.com.br>",
   "license": "MIT",
   "readmeFilename": "README.md",
   "main": "dist/test.js",
