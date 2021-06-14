@@ -1,19 +1,19 @@
 {
   "name": "linxcommerce-nestjs-shared",
-  "version": "0.1.0",
-  "description": "NestJS npm package shared",
+  "version": "0.2.2",
+  "description": "Linx Commerce NestJS shared modules",
   "author": "Giovanni Mansueto <giovanni.mansueto@linx.com.br>",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "main": "dist/index.js",
-  "files": [
-    "dist/**/*",
-    "*.md"
-  ],
+  "main": "./index.js",
   "scripts": {
+    "start": "npm run build && npm run copypackage && npm run start:dev",
     "start:dev": "tsc -w",
     "build": "tsc",
-    "prepare": "npm run build",
+    "copypackage": "cp -rf package.json dist",
+    "link": "npm run build && npm run copypackage && cd dist && npm link",
+    "unlink": "npm run build && npm run copypackage && cd dist && npm unlink",
+    "dist": "npm run build && npm run copypackage && cd dist && npm publish",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
@@ -24,9 +24,6 @@
   "keywords": [
     "nestjs"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/giovanni-linxcommerce/nestjs-shared"
