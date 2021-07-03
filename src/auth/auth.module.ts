@@ -1,6 +1,7 @@
 import { Module, HttpModule } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { JwtStrategy } from './jwt.strategy';
+import { JwtIdADStrategy } from './jwt-id-ad.strategy';
+import { JwtOAuthStrategy } from './jwt-oauth.strategy';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { getPublicKey, jwtSettings } from './constants';
@@ -21,7 +22,7 @@ import { getPublicKey, jwtSettings } from './constants';
       },
     }),
   ],
-  providers: [AuthService, JwtStrategy],
+  providers: [AuthService, JwtIdADStrategy, JwtOAuthStrategy],
   exports: [AuthService],
 })
 export class AuthModule {}

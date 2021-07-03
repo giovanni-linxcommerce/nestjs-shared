@@ -3,8 +3,10 @@ import { PassportStrategy } from '@nestjs/passport';
 import { Injectable } from '@nestjs/common';
 import { getPublicKey } from './constants';
 
+export const idADstrategyName = 'id-ad-jwt';
+
 @Injectable()
-export class JwtStrategy extends PassportStrategy(Strategy) {
+export class JwtIdADStrategy extends PassportStrategy(Strategy, idADstrategyName) {
   constructor() {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),

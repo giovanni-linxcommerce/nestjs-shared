@@ -1,6 +1,6 @@
 {
   "name": "linxcommerce-nestjs-shared",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Linx Commerce NestJS shared modules",
   "author": "Giovanni Mansueto <giovanni.mansueto@linx.com.br>",
   "license": "MIT",
@@ -36,6 +36,7 @@
   "dependencies": {
     "@nestjs/jwt": "^7.2.0",
     "@nestjs/passport": "^7.1.5",
+    "jwks-rsa": "^2.0.3",
     "node-fetch": "^2.6.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
